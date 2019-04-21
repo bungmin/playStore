@@ -10,6 +10,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/titleTxt"
+        android:text="플레이스토어 게임 순위"
+        android:gravity="center"
+        android:textSize="20dp"
         >
 
 
