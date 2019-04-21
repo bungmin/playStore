@@ -1,6 +1,8 @@
 package com.hh.playstore;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
+import android.net.Uri;
 import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -52,6 +54,19 @@ public class AppDetailActivity extends AppCompatActivity {
             act.purchaseBtn.setText(String.format("구매하기(%,d원)", mAppData.price));
 
         }
+
+
+
+        act.dialBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Uri phoneUri = Uri.parse("tel:01071265530");
+                Intent intent = new Intent(Intent.ACTION_DIAL, phoneUri);
+                startActivity(intent);
+
+            }
+        });
 
 
 
