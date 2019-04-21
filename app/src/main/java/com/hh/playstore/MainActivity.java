@@ -39,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Toast.makeText(MainActivity.this,"확인버튼을 눌렀습니다.", Toast.LENGTH_SHORT ).show();
 
+                appList.add(new App(6, "스왐피(Swampy)", "Disney", 4, 3000, false));
+                mAdapter.notifyDataSetChanged();
+
 
 
             }
