@@ -57,6 +57,7 @@ public class AppDetailActivity extends AppCompatActivity {
 
 
 
+
         act.dialBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
