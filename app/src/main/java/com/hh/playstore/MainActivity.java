@@ -9,11 +9,13 @@ import com.hh.playstore.databinding.ActivityMainBinding;
 import java.util.ArrayList;
 import java.util.List;
 
+import Adapter.AppAdapter;
 import datas.App;
 
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding act;
     List<App> appList = new ArrayList<>();
+    AppAdapter mAdapter;
 
 
 
@@ -25,11 +27,25 @@ public class MainActivity extends AppCompatActivity {
 
         fillApps();
 
+        mAdapter = new AppAdapter(MainActivity.this, appList);
+        act.appRankList.setAdapter(mAdapter);
+
+
+
+
 
 
     }
 
     void fillApps(){
+        /*appList.add(new App(1, "아스팔트 8: 에어본", "GameLoft", 5, 6000, true));
+        appList.add(new App(2, "아스팔트 8: 에어본", "GameLoft", 5, 6000, true));
+        appList.add(new App(3, "아스팔트 8: 에어본", "GameLoft", 5, 6000, true));
+        appList.add(new App(4, "아스팔트 8: 에어본", "GameLoft", 5, 6000, true));
+        appList.add(new App(5, "아스팔트 8: 에어본", "GameLoft", 5, 6000, true));
+        appList.add(new App(6, "아스팔트 8: 에어본", "GameLoft", 5, 6000, true));*/
+
+
         appList.add(new App(1, "아스팔트 8: 에어본", "GameLoft", 5, 6000, true));
         appList.add(new App(2, "MineCraft - Pocket Edition", "Mojang", 4, 5000, true));
         appList.add(new App(3, "아스팔트 7: 하트", "GameLoft", 2, 1000, false));
